@@ -1,5 +1,6 @@
 import { useState } from "react"
 import CatList from "./CatList"
+import CatSearch from "./CatSearch"
 
 const catImages = [
     {
@@ -67,6 +68,7 @@ const CatProvider = () => {
     const [searchTerm, setSearchTerm] = useState(catImages)
     return (
         <>
+        <CatSearch setSearchTerm={setSearchTerm}/>
             <CatList searchTerm={searchTerm}/>
         </>
     )

@@ -3,11 +3,9 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const CatCard = ({catUrl, catId}) => {
     return (
-        <Carousel.Item>
-            {/* <ExampleCarouselImage text="First slide" /> */}
+            <li key={catId} className="cat-card">
             <img key={catUrl} src={catUrl}/>
-        </Carousel.Item>
-        // <li key={catId} className="cat-card">
+        </li>
     )
 }
 
@@ -16,10 +14,3 @@ export default CatCard
 
 
 
-    //   <Carousel.Item>
-    //     <ExampleCarouselImage text="First slide" />
-    //     <Carousel.Caption>
-    //       <h3>First slide label</h3>
-    //       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    //     </Carousel.Caption>
-    //   </Carousel.Item> */
