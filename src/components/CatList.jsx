@@ -9,8 +9,7 @@ const apiKey = "live_bQMl8MCnVXxltWqn0ROrEbGf9OeVMPbWPPC0gyqaRGpROGsM9OzOtgkVMzl
 const CatList = ({searchTerm}) => {
     const [cats, setCats] = useState([])
     const [isLoading, setIsLoading] = useState(true);
-    
-    
+
     useEffect(() => {
         setIsLoading(true)
         axios.get(`https://api.thecatapi.com/v1/images/search?api_key=${apiKey}&limit=${searchTerm}`).then((response) => {
@@ -18,7 +17,7 @@ const CatList = ({searchTerm}) => {
             setIsLoading(false)
         })
     }, [searchTerm])
-    
+
     if (isLoading) {
         return <Lottie className="loading-animation" animationData={loadingAnimation} loop="true"/>
     }
@@ -26,7 +25,9 @@ const CatList = ({searchTerm}) => {
     return (
         <ol className="cat-list">
             {cats.map((cat) => {
-                return <CatCard catId={cat.id} catUrl={cat.url} key={cat.id}/>
+                return (
+                    <CatCard catId={cat.id} catUrl={cat.url} key={cat.id}/>
+                )
             })}
         </ol>
     )

@@ -1,12 +1,13 @@
 #root {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
 img {
-  max-width: 350px;
+  max-width: 300px;
+  max-height: 250px;
 }
 
 /* 
@@ -18,7 +19,11 @@ img {
 
 .cat-list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+.cat-card {
+  height: 300px;
+  width: 300px;
 }
