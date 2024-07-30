@@ -22,6 +22,7 @@ const CatList = ({searchTerm}) => {
         return <Lottie className="loading-animation" animationData={loadingAnimation} loop="true"/>
     }
 
+    console.log(cats)
     return (
         <ol className="cat-list">
             {cats.map((cat) => {
