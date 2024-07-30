@@ -45,10 +45,18 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: rgb(158, 209, 253);
+  border: #535bf2 2px solid;
 }
+
 button:hover {
   border-color: #646cff;
+  background-color: rgb(123, 178, 226);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -62,7 +70,12 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
+
   button {
-    background-color: #f9f9f9;
+    /* margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(158, 209, 253);
+    border: #535bf2 2px solid; */
   }
 }
