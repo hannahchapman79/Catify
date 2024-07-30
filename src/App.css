@@ -8,3 +8,17 @@
 img {
   max-width: 350px;
 }
+
+/* 
+.loading-animation {
+  max-width: 150px;
+  display: flex;
+  justify-content: center;
+} */
+
+.cat-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
