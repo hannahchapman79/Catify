@@ -1,5 +1,5 @@
 const Header = () => {
-    return <img src="src/assets/Catify-logo.png" alt="Catify logo"/>
+    return <img src="/assets/catify-logo.png" alt="Catify logo"/>
 }
 
 export default Header
