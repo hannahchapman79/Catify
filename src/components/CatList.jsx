@@ -6,13 +6,15 @@ import Lottie from "lottie-react"
 
 const apiKey = "live_bQMl8MCnVXxltWqn0ROrEbGf9OeVMPbWPPC0gyqaRGpROGsM9OzOtgkVMzlADgpT";
 
-const CatList = ({searchTerm}) => {
+const CatList = ({searchTerm, breed}) => {
     const [cats, setCats] = useState([])
     const [isLoading, setIsLoading] = useState(true);
 
+    const url = `https://api.thecatapi.com/v1/images/search?api_key=${apiKey}&breed_ids=${breed}&limit=${searchTerm}`
+
     useEffect(() => {
         setIsLoading(true)
-        axios.get(`https://api.thecatapi.com/v1/images/search?api_key=${apiKey}&limit=${searchTerm}`).then((response) => {
+        axios.get(url).then((response) => {
             setCats(response.data)
             setIsLoading(false)
         })
@@ -22,7 +24,6 @@ const CatList = ({searchTerm}) => {
         return <Lottie className="loading-animation" animationData={loadingAnimation} loop="true"/>
     }
 
-    console.log(cats)
     return (
         <ol className="cat-list">
             {cats.map((cat) => {
@@ -33,5 +34,4 @@ const CatList = ({searchTerm}) => {
         </ol>
     )
 }
-
 export default CatList

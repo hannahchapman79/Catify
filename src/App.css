@@ -1,11 +1,12 @@
 #root {
-  /* max-width: 600px; */
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
   text-align: center;
+  margin: 0 auto;
+
 }
-
-
 
 img {
   padding-top: 20px;
@@ -16,12 +17,13 @@ img {
   max-height: 230px;
 }
 
-/* 
 .loading-animation {
-  max-width: 150px;
+  max-width: 200px;
   display: flex;
   justify-content: center;
-} */
+  align-items: center;
+  height: 100%;
+}
 
 .cat-list {
   display: flex;
@@ -31,18 +33,53 @@ img {
 }
 
 .cat-card {
-
   height: 300px;
   width: 300px;
   display: flex;
   justify-content: center;
-  border: solid 5px black;
+  border: solid 5px #2980b9;
   border-radius: 20px;
   padding: 5px;
   margin: 10px;
-  background-image: linear-gradient(to bottom left, rgb(249, 217, 253), rgb(249, 178, 255) );
+  background-color: #BDE0FE;
 }
 
 .button-and-cat {
   display: flex;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+label {
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+input {
+  padding: 5px;
+  border: #2980b9 3px solid;
+  border-radius: 10px;
+
+}
+
+input, select {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  text-transform: capitalize;
+  color: #fff;
+  background: #292929;
+  text-align: left;
+  padding: 0 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
