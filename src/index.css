@@ -26,10 +26,12 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  place-content: center;
+  width: 100vw; 
   background-color: #343a40;
   color: #ecf0f1;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -44,18 +46,18 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #FFAFCC;
+  background-color: #f980ac;
   cursor: pointer;
   margin-top: 5px;
   margin-left: 5px;
   margin-right: 5px;
-  background: linear-gradient(90deg, #FFAFCC, #FFC8DD);
+  background: linear-gradient(90deg, #f980ac, #FFC8DD);
   background-size: 200%;
 }
 
 .expand-button:hover {
   border-color: #FFC8DD;
-  background-position: -100% 0;
+  background-position: -150% 0;
 }
 
 button:focus,
@@ -73,7 +75,6 @@ button:focus-visible {
   background-position: -100% 0;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -82,4 +83,9 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
+}
+
+
+html {
+  overflow-x: hidden;
 }
