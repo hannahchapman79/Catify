@@ -1,6 +1,6 @@
 # Catify
 
-Hosted version: https://hannahscatlifyapp.netlify.app/
+Hosted version: https://hannahs-catify-app.netlify.app/
 
 ## Description
 
